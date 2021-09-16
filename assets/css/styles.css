@@ -1,16 +1,23 @@
 /*===== GOOGLE FONTS =====*/
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
 /*===== VARIABLES CSS =====*/
 :root{
+
+  --hue-color: 225;
   /*===== Colores =====*/
-  --first-color: #9d4bff;
+  --first-color: hsl(267, 100%, 65%);
   --first-color-dark: #23004d;
   --first-color-ligh: #A49eac;
   --first-color-ligthen: #f2f2f2;
+  --text-color: hsl(var(--hue-color), 12%, 25%);
+  --title-color: hsl(var(--hue-color), 48%, 22%);
+  --body-color: hsl(var(--hue-color), 48%, 98%);
+  --container-color: #fff; 
+ 
 
   /*===== Font and typography =====*/
-  --body-font: 'Opens Sans', sans-serif;
+  --body-font: 'Poppins', sans-serif;
   --h1-font-size: 2.4rem;
   --normal-font-size: 1.5rem;
   --small-font-size: 1.3rem
@@ -40,8 +47,26 @@ body{
   color: var(--first-color-dark);
 }
 
+h1{
+  margin: 0;
+}
 
-/*===== LOGIN =====*/
+a{
+  text-decoration: none;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+/*========================= LAYOUT ================================*/
+.container{
+  max-width: 768px;
+  margin-left: 1.6rem;
+  margin-right: 1.6rem;
+}
+/*===== formulario =====*/
 
 
 /*Show login*/
