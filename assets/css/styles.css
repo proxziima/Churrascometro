@@ -1,0 +1,53 @@
+/*===== GOOGLE FONTS =====*/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
+
+/*===== VARIABLES CSS =====*/
+:root{
+  /*===== Colores =====*/
+  --first-color: #9d4bff;
+  --first-color-dark: #23004d;
+  --first-color-ligh: #A49eac;
+  --first-color-ligthen: #f2f2f2;
+
+  /*===== Font and typography =====*/
+  --body-font: 'Opens Sans', sans-serif;
+  --h1-font-size: 2.4rem;
+  --normal-font-size: 1.5rem;
+  --small-font-size: 1.3rem
+}
+
+@media screen and (min-width: 768px){
+  :root{
+    --normal-font-size: 1.6rem;
+    --small-font-size: 1.4rem;
+  }
+}
+
+/*===== BASE =====*/
+*,::before,::after{
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 62.5%;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  color: var(--first-color-dark);
+}
+
+
+/*===== LOGIN =====*/
+
+
+/*Show login*/
+
+
+/*Hidden login*/
+
+
+/* ===== MEDIA QUERIES =====*/
