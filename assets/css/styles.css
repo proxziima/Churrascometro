@@ -1,78 +1,103 @@
-/*===== GOOGLE FONTS =====*/
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
-
-/*===== VARIABLES CSS =====*/
-:root{
-
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+/*=============== VARIABLES CSS ===============*/
+:root {
+  /*========== Colors ==========*/
   --hue-color: 225;
-  /*===== Colores =====*/
-  --first-color: hsl(267, 100%, 65%);
-  --first-color-dark: #23004d;
-  --first-color-ligh: #A49eac;
-  --first-color-ligthen: #f2f2f2;
-  --text-color: hsl(var(--hue-color), 12%, 25%);
+  --first-color: hsl(var(--hue-color), 48%, 35%);
   --title-color: hsl(var(--hue-color), 48%, 22%);
+  --text-color: hsl(var(--hue-color), 12%, 35%);
   --body-color: hsl(var(--hue-color), 48%, 98%);
-  --container-color: #fff; 
- 
-
-  /*===== Font and typography =====*/
+  --container-color: #fff;
+  /*========== Font and typography ==========*/
   --body-font: 'Poppins', sans-serif;
-  --h1-font-size: 2.4rem;
   --normal-font-size: 1.5rem;
-  --small-font-size: 1.3rem
+  --small-font-size: 1.3rem;
+  --smaller-font-size: 1.2rem;
 }
 
-@media screen and (min-width: 768px){
-  :root{
+@media screen and (min-width: 968px) {
+  :root {
     --normal-font-size: 1.6rem;
     --small-font-size: 1.4rem;
+    --smaller-font-size: 1.3rem;
   }
 }
 
-/*===== BASE =====*/
-*,::before,::after{
+/*=============== BASE ===============*/
+*, ::before, ::after {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
-html{
+html {
   font-size: 62.5%;
 }
 
-body{
-  margin: 0;
-  padding: 0;
+body {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
-  color: var(--first-color-dark);
+  background-color: var(--body-color);
+  color: var(--text-color);
 }
 
-h1{
-  margin: 0;
-}
-
-a{
-  text-decoration: none;
-}
-
-img{
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-/*========================= LAYOUT ================================*/
-.container{
-  max-width: 768px;
+/*=============== LAYOUT ===============*/
+.container {
+  max-width: 968px;
   margin-left: 1.6rem;
   margin-right: 1.6rem;
 }
-/*===== formulario =====*/
 
+/*============= ACCORDION =================*/
+.accordion {
+  display: grid;
+  align-content: center;
+  height: 100vh;
+}
 
-/*Show login*/
+.accordion__container {
+  display: grid;
+  row-gap: 1.2rem;
+  padding: 3.2rem 1.6rem;
+  background-color: var(--container-color);
+  border-radius: .8rem;
+  box-shadow: 0 12px 32px rgba(51, 51, 51, 0.1);
+}
 
+.accordion__title {
+  font-size: var(--small-font-size);
+  color: var(--title-color);
+  font-weight: 400;
+  margin-top: .24rem;
+  transition: .2s;
+}
 
-/*Hidden login*/
+.accordion__header {
+  display: flex;
+  column-gap: .8rem;
+  padding: 2rem 2rem 2rem 1.6rem;
+  cursor: pointer;
+}
 
+.accordion__content {
+  padding: 0 2rem 2rem 4.8rem;
+  font-size: var(--smaller-font-size);
+}
 
-/* ===== MEDIA QUERIES =====*/
+.accordion__icon {
+  font-size: 2.4rem;
+  height: max-content;
+  color: var(--title-color);
+  transition: .3s;
+}
+
+.accordion__item {
+  box-shadow: 0 0.2rem 0.6rem rgba(38, 38, 38, 0.1);
+  background-color: var(--container-color);
+  border-radius: .4rem;
+  position: relative;
+  transition: all .25s ease;
+}
+
+/* Rotate the plus icon and add font weight to titles*/
