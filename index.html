@@ -24,37 +24,36 @@
                     <div class="accordion__item">
                         <header class="accordion__header">
                             <i class="bx bx-plus accordion__icon"></i>
-                            <h3 class="accordion__title">Serão quantos convidados?</h3>
+                            <h3 class="accordion__title">👩‍🍳 Serão quantos convidados?</h3>
                         </header>
 
                         <div class="accordion__content">
                             <!-- ====================== HOMENS ============================= -->
-                            <div class="convidado__slider">
-                                <p class="convidado__icon">👨 Homens</p>
+                            <div class="accordion__slider">
+                                <p>👨 Homens</p>
                                 <input id="adulto__slider" type="range" min="0" max="100" value="3" oninput="adulto_value.innerText = this.value">
                                 <p id="adulto_value">10</p>
                             </div>
 
                             <!-- ====================== MULHERES ============================= -->
-                            <div class="convidado__slider">
-                                <p class="convidado__icon">👩 Mulheres</p>
+                            <div class="accordion__slider">
+                                <p >👩 Mulheres</p>
                                 <input id="mulher__slider" type="range" min="0" max="100" value="3" oninput="mulher_value.innerText = this.value">
                                 <p id="mulher_value">10</p>
                             </div>
 
                             <!-- ====================== CRIANÇAS ============================= -->
-                            <div class="convidado__slider">
-                                <p class="convidado__icon">👶 Crianças</p>
+                            <div class="accordion__slider">
+                                <p >👶 Crianças</p>
                                 <input id="crianca__slider" type="range" min="0" max="100" value="3" oninput="crianca_value.innerText = this.value">
                                 <p id="crianca_value">10</p>
                             </div>
 
                             <!-- ====================== VEGANOS ============================= -->
-                            <div class="convidado__slider">
-                                <p class="convidado__icon">🥦 Veganos</p>
+                            <div class="accordion__slider">
+                                <p >🥦 Veganos</p>
                                 <input id="vegano__slider" type="range" min="0" max="100" value="3" oninput="vegano_value.innerText = this.value">
                                 <p id="vegano_value">10</p>
-                                <span>Selecione até 1 pessoa</span>
                             </div>
                         </div>
                     </div>
@@ -63,66 +62,69 @@
                     <div class="accordion__item">
                         <header class="accordion__header">
                             <i class="bx bx-plus accordion__icon"></i>
-                            <h3 class="accordion__title">Quais serão as carnes e vegetais?</h3>
+                            <h3 class="accordion__title">🥩 Quais serão as carnes e vegetais?</h3>
                         </header>
 
                         <div class="accordion__content">
-                            <div class="produto__grid grid">
-                                <div class="produto__item">
+                            <div class="accordion__grid grid">
+                                <div class="accordion__grid__item">
                                     <input id="picanha_check" type="checkbox">
-                                    <label for="picanha_check">Picanha</label>
+                                    <label class="noselect" for="picanha_check">Picanha</label>
                                 </div>
 
-                                <div class="produto__item">
-                                    <input id="picanha_check" type="checkbox">
-                                    <label for="picanha_check">Alcatra</label>
+                                <div class="accordion__grid__item">
+                                    <input id="alcatra_check" type="checkbox">
+                                    <label class="noselect" for="alcatra_check">Alcatra</label>
                                 </div>
 
-                                <div class="produto__item">
+                                <div class="accordion__grid__item">
                                     <input id="mignon_check" type="checkbox">
-                                    <label for="mignon_check">Filé Mignon</label>
+                                    <label class="noselect" for="mignon_check">Filé Mignon</label>
                                 </div>
 
-                                <div class="produto__item">
+                                <div class="accordion__grid__item">
                                     <input id="linguica_check" type="checkbox">
-                                    <label for="linguica_check">Linguiça</label>
+                                    <label class="noselect" for="linguica_check">Linguiça</label>
                                 </div>
 
-                                <div class="produto__item">
+                                <div class="accordion__grid__item">
                                     <input id="tulipa_check" type="checkbox">
-                                    <label for="tulipa_check">Tulipa</label>
+                                    <label class="noselect" for="tulipa_check">Tulipa</label>
                                 </div>
 
-                                <div class="produto__item">
+                                <div class="accordion__grid__item">
                                     <input id="coxa_check" type="checkbox">
-                                    <label for="coxa_check">Coxa da Asa</label>
+                                    <label class="noselect" for="coxa_check">Coxa da Asa</label>
                                 </div>
                             </div>
-                            <span class="divider"></span>
-                            <div class="produto__grid grid">
-                                <div class="produto__item">
+
+                            <div class="divider"></div>
+
+
+                            <div class="accordion__grid grid">
+                                <div class="accordion__grid__item">
                                     <input id="berinjela_check" type="checkbox">
-                                    <label for="berinjela_check">Berinjela</label>
+                                    <label class="noselect" for="berinjela_check">Abobrinha</label>
                                 </div>
 
-                                <div class="produto__item">
-                                    <input id="berinjela_check" type="checkbox">
-                                    <label for="abobrinha_check">Abobrinha</label>
+                                <div class="accordion__grid__item">
+                                    <input id="abobrinha_check" type="checkbox">
+                                    <label class="noselect" for="abobrinha_check">Abobrinha</label>
                                 </div>
 
-                                <div class="produto__item">
+                                <div class="accordion__grid__item">
                                     <input id="brocolis_check" type="checkbox">
-                                    <label for="brocolis_check">Brócolis</label>
+                                    <label class="noselect" for="brocolis_check">Brócolis</label>
                                 </div>
 
-                                <div class="produto__item">
+                                <div class="accordion__grid__item">
                                     <input id="cogumelo_check" type="checkbox">
-                                    <label for="cogumelo_check">Cogumelos</label>
+                                    <label class="noselect" for="cogumelo_check">Cogumelos</label>
                                 </div>
 
-                                <div class="produto__item">
+                                <div class="accordion__grid__item">
                                     <input id="cenoura_check" type="checkbox">
-                                    <label for="cenoura_check">Berinjela</label>
+                                    <label class="noselect" for="cenoura_check">Berinjela</label>
                                 </div>
                             </div>
                         </div>
@@ -132,39 +134,39 @@
                     <div class="accordion__item">
                         <header class="accordion__header">
                             <i class="bx bx-plus accordion__icon"></i>
-                            <h3 class="accordion__title">Pensou em quais acompanhamentos?</h3>
+                            <h3 class="accordion__title">🥗 Pensou em quais acompanhamentos?</h3>
                         </header>
 
                         <div class="accordion__content">
-                            <div class="produto__grid grid">
-                                <div class="produto__item">
+                            <div class="accordion__grid grid">
+                                <div class="accordion__grid__item">
                                     <input id="arroz_check" type="checkbox">
-                                    <label for="arroz_check">Arroz</label>
+                                    <label class="noselect" for="arroz_check">Arroz</label>
                                 </div>
 
-                                <div class="produto__item">
+                                <div class="accordion__grid__item">
                                     <input id="farofa_check" type="checkbox">
-                                    <label for="farofa_check">Farofa</label>
+                                    <label class="noselect" for="farofa_check">Farofa</label>
                                 </div>
 
-                                <div class="produto__item">
+                                <div class="accordion__grid__item">
                                     <input id="maionese_check" type="checkbox">
-                                    <label for="maionese_check">Maionese</label>
+                                    <label class="noselect" for="maionese_check">Maionese</label>
                                 </div>
 
-                                <div class="produto__item">
+                                <div class="accordion__grid__item">
                                     <input id="paoDeAlho_check" type="checkbox">
-                                    <label for="paoDeAlho_check">Pão de Alho</label>
+                                    <label class="noselect" for="paoDeAlho_check">Pão de Alho</label>
                                 </div>
 
-                                <div class="produto__item">
+                                <div class="accordion__grid__item">
                                     <input id="queijo_check" type="checkbox">
-                                    <label for="queijo_check">Queijo</label>
+                                    <label class="noselect" for="queijo_check">Queijo</label>
                                 </div>
 
-                                <div class="produto__item">
+                                <div class="accordion__grid__item">
                                     <input id="vinagrete_check" type="checkbox">
-                                    <label for="vinagrete_check">Vinagrete</label>
+                                    <label class="noselect" for="vinagrete_check">Vinagrete</label>
                                 </div>
                             </div>
                         </div>
@@ -174,39 +176,39 @@
                     <div class="accordion__item">
                         <header class="accordion__header">
                             <i class="bx bx-plus accordion__icon"></i>
-                            <h3 class="accordion__title">Não esqueça dos suprimentos</h3>
+                            <h3 class="accordion__title">🛒 Não esqueça dos suprimentos</h3>
                         </header>
 
                         <div class="accordion__content">
-                            <div class="produto__grid grid">
-                                <div class="produto__item">
+                            <div class="accordion__grid grid">
+                                <div class="accordion__grid__item">
                                     <input id="carvao_check" type="checkbox">
-                                    <label for="carvao_check">Carvão</label>
+                                    <label class="noselect" for="carvao_check">Carvão</label>
                                 </div>
 
-                                <div class="produto__item">
+                                <div class="accordion__grid__item">
                                     <input id="copos_check" type="checkbox">
-                                    <label for="copos_check">Copos</label>
+                                    <label class="noselect" for="copos_check">Copos</label>
                                 </div>
 
-                                <div class="produto__item">
+                                <div class="accordion__grid__item">
                                     <input id="gelo_check" type="checkbox">
-                                    <label for="gelo_check">Gelo</label>
+                                    <label class="noselect" for="gelo_check">Gelo</label>
                                 </div>
 
-                                <div class="produto__item">
+                                <div class="accordion__grid__item">
                                     <input id="guardanapo_check" type="checkbox">
-                                    <label for="guardanapo_check">Guardanapo</label>
+                                    <label class="noselect" for="guardanapo_check">Guardanapo</label>
                                 </div>
 
-                                <div class="produto__item">
+                                <div class="accordion__grid__item">
                                     <input id="limao_check" type="checkbox">
-                                    <label for="limao_check">Limão</label>
+                                    <label class="noselect" for="limao_check">Limão</label>
                                 </div>
 
-                                <div class="produto__item">
+                                <div class="accordion__grid__item">
                                     <input id="sal_check" type="checkbox">
-                                    <label for="sal_check">Sal Grosso</label>
+                                    <label class="noselect" for="sal_check">Sal Grosso</label>
                                 </div>
                             </div>
                         </div>
@@ -216,34 +218,34 @@
                     <div class="accordion__item">
                         <header class="accordion__header">
                             <i class="bx bx-plus accordion__icon"></i>
-                            <h3 class="accordion__title">Quais bebidas deseja servir?</h3>
+                            <h3 class="accordion__title">🥤Quais bebidas deseja servir?</h3>
                         </header>
 
                         <div class="accordion__content">
-                            <div class="produto__grid grid">
-                                <div class="produto__item">
-                                    <input id="picanha_check" type="checkbox">
-                                    <label for="picanha_check">Água</label>
+                            <div class="accordion__grid grid">
+                                <div class="accordion__grid__item">
+                                    <input id="agua_check" type="checkbox">
+                                    <label class="noselect" for="agua_check">Água</label>
                                 </div>
 
-                                <div class="produto__item">
-                                    <input id="picanha_check" type="checkbox">
-                                    <label for="picanha_check">Cachaça</label>
+                                <div class="accordion__grid__item">
+                                    <input id="cachaca_check" type="checkbox">
+                                    <label class="noselect" for="cachaca_check">Cachaça</label>
                                 </div>
 
-                                <div class="produto__item">
-                                    <input id="mignon_check" type="checkbox">
-                                    <label for="mignon_check">Cerveja</label>
+                                <div class="accordion__grid__item">
+                                    <input id="cerveja_check" type="checkbox">
+                                    <label class="noselect" for="cerveja_check">Cerveja</label>
                                 </div>
 
-                                <div class="produto__item">
-                                    <input id="linguica_check" type="checkbox">
-                                    <label for="linguica_check">Refrigerante</label>
+                                <div class="accordion__grid__item">
+                                    <input id="refrigerante_check" type="checkbox">
+                                    <label class="noselect" for="refrigerante_check">Refrigerante</label>
                                 </div>
 
-                                <div class="produto__item">
-                                    <input id="tulipa_check" type="checkbox">
-                                    <label for="tulipa_check">Suco</label>
+                                <div class="accordion__grid__item">
+                                    <input id="suco_check" type="checkbox">
+                                    <label class="noselect" for="suco_check">Suco</label>
                                 </div>
                             </div>
                         </div>

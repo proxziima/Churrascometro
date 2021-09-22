@@ -1,2 +1,8 @@
 /*===== BASE DE CÁLCULO =====*/
-/*===== LOGIN SHOW and HIDDEN =====*/
+
+/*===== ACCORDION SHOW AND HIDE =====*/
+const accordionItems = document.querySelectorAll('.accordion__item');
+
+accordionItems.forEach((item)) => {
+    
+}
