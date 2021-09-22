@@ -7,6 +7,8 @@
 
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
+    overflow-y: scroll;
 }
 
 body{
@@ -14,4 +16,14 @@ body{
     font-size: var(--normal-font-size);
     background-color: var(--body-color);
     color: var(--text-color);
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    display: block;
 }

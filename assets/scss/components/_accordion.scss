@@ -1,16 +1,20 @@
 /*============= ACCORDION =================*/
 .accordion {
-  display: grid;
-  align-content: center;
-  height: 100vh;
 
   &__container {
-    display: grid;
-    row-gap: 1.2rem;
+    position: absolute;
+    margin: 0 auto;
+    top: 6rem;
     padding: 3.2rem 1.6rem;
     background-color: var(--container-color);
     border-radius: 0.8rem;
-    box-shadow: 0 12px 32px hsla(0, 0%, 20%, 0.1);
+    box-shadow: 0 8px 20px hsla(267, 100%, 15%, 0.2);
+  }
+
+  &__itens{
+    display: grid;
+    row-gap: 1.2rem;
+    grid-template-columns: 100%;
   }
 
   &__title {
@@ -26,6 +30,99 @@
     column-gap: 0.8rem;
     padding: 2rem 2rem 2rem 1.6rem;
     cursor: pointer;
+  }
+
+  
+  &__icon {
+    font-size: 2.4rem;
+    height: max-content;
+    color: var(--title-color);
+    transition: 0.3s;
+  }
+
+  &__item {
+    box-shadow: 0 0.2rem 0.6rem hsla(0, 0%, 15%, 0.1);
+    background-color: var(--first-color-lighten);
+    border-radius: 0.4rem;
+    position: relative;
+    transition: all 0.25s ease;
+
+    &::after {
+      content: "";
+      background-color: var(--first-color);
+      width: 0.5rem;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 0.4rem 0 0 0.4rem;
+    }
+    
+
+    //Optional color for each accordion item
+
+    &:nth-child(1) {
+      background: hsl(28, 100, 97);
+
+      &::after {
+        background: hsl(28, 100, 77);
+      }
+
+    }
+
+    &:nth-child(2) {
+      background: hsl(240, 100, 97);
+
+      label::before {
+        border-color: hsl(240, 100, 77);
+      }
+
+      input[type="checkbox"]:checked + label::before{
+        background-color: hsl(240, 100, 77);
+      }
+
+      &::after {
+        background: hsl(240, 100, 77);
+      }
+    }
+
+    &:nth-child(3) {
+      background: hsl(348, 100, 97);
+
+      label::before {
+        border-color: hsl(348, 100, 77);
+      }
+
+      input[type="checkbox"]:checked + label::before{
+        background-color: hsl(348, 100, 77);
+      }
+
+      &::after {
+        background: hsl(348, 100, 77);
+      }
+    }
+
+    &:nth-child(4) {
+      background: hsl(200, 100, 97);
+
+      label::before {
+        border-color: hsl(200, 100, 77);
+      }
+      
+      input[type="checkbox"]:checked + label::before{
+        background-color: hsl(200, 100, 77);
+      }
+
+      &::after {
+        background: hsl(200, 100, 77);
+      }
+    }
+  }
+
+  &__content{
+      overflow: hidden;
+      height: 0;
+      transition: all .25s ease;
   }
 
   //Ajustement to the grid layout to the sliders and checkbox
@@ -132,97 +229,6 @@
     }//accordion__grid__item
   }//accordion__grid
 
-  &__icon {
-    font-size: 2.4rem;
-    height: max-content;
-    color: var(--title-color);
-    transition: 0.3s;
-  }
-
-  &__item {
-    box-shadow: 0 0.2rem 0.6rem hsla(0, 0%, 15%, 0.1);
-    background-color: var(--container-color);
-    border-radius: 0.4rem;
-    position: relative;
-    transition: all 0.25s ease;
-
-    &::after {
-      content: "";
-      background-color: var(--first-color);
-      width: 0.5rem;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      border-radius: 0.4rem 0 0 0.4rem;
-    }
-    
-
-    //Optional color for each accordion item
-
-    &:nth-child(1) {
-      background: hsl(28, 100, 97);
-
-      &::after {
-        background: hsl(28, 100, 77);
-      }
-
-    }
-
-    &:nth-child(2) {
-      background: hsl(240, 100, 97);
-
-      label::before {
-        border-color: hsl(240, 100, 77);
-      }
-
-      input[type="checkbox"]:checked + label::before{
-        background-color: hsl(240, 100, 77);
-      }
-
-      &::after {
-        background: hsl(240, 100, 77);
-      }
-    }
-
-    &:nth-child(3) {
-      background: hsl(348, 100, 97);
-
-      label::before {
-        border-color: hsl(348, 100, 77);
-      }
-
-      input[type="checkbox"]:checked + label::before{
-        background-color: hsl(348, 100, 77);
-      }
-
-      &::after {
-        background: hsl(348, 100, 77);
-      }
-    }
-
-    &:nth-child(4) {
-      background: hsl(200, 100, 97);
-
-      label::before {
-        border-color: hsl(200, 100, 77);
-      }
-      
-      input[type="checkbox"]:checked + label::before{
-        background-color: hsl(200, 100, 77);
-      }
-
-      &::after {
-        background: hsl(200, 100, 77);
-      }
-    }
-  }
-
-  &__content{
-      overflow: hidden;
-      height: 0;
-      transition: all .25s ease;
-  }
 }
 
 //divider stylish
@@ -258,7 +264,15 @@
   
 }
 /* Rotate the plus icon and add font weight to titles*/
+.accordion-open{
+  //Add rotation to the icon
+  & .accordion__icon{
+    transform: rotate(135deg);
+  }
 
-//Add rotation to the icon
+  & .accordion__title{
+    font-weight: 600;
+  }
+}
 
 //Add font weight to the title of the open accordion
