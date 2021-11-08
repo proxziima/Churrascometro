@@ -17,6 +17,7 @@
   --scroll-thumb-hover: hsl(var(--hue-color), 20%, 60%);
   /*========== Font and typography ==========*/
   --body-font: 'Poppins', sans-serif;
+  --title--font-size: 2rem;
   --normal-font-size: 1.5rem;
   --small-font-size: 1.3rem;
   --smaller-font-size: 1.2rem;
@@ -24,6 +25,7 @@
 
 @media screen and (min-width: 768px) {
   :root {
+    --title--font-size: 1.7rem;
     --normal-font-size: 1.6rem;
     --small-font-size: 1.4rem;
     --smaller-font-size: 1.3rem;
@@ -61,12 +63,6 @@ img {
 }
 
 /*=============== LAYOUT ===============*/
-.container {
-  max-width: 968px;
-  margin-left: 1.6rem;
-  margin-right: 1.6rem;
-}
-
 .noselect {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -77,23 +73,30 @@ img {
 
 /*=============== CALCULATOR FORM ===============*/
 .calc {
-  display: grid;
-  grid-template-columns: 100%;
-  height: 100vh;
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
+  max-width: 968px;
+  min-height: 100vh;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .calc__content {
-  display: grid;
+  width: 95%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
+  max-height: 66rem;
 }
 
 .calc__img {
-  justify-self: center;
+  width: 80%;
 }
 
 .calc__img img {
-  width: 30rem;
+  width: 90vw;
   margin-top: 1.5rem;
   border-radius: .75rem;
 }
@@ -116,13 +119,41 @@ img {
 
 .calc__social {
   display: flex;
-  justify-content: space-between;
-  padding: 0 10rem;
+  width: 100%;
+  justify-content: space-around;
 }
 
 .calc__social__icon {
   font-size: 2rem;
   color: var(--first-color-dark);
+}
+
+/*========== FOOTER ==========*/
+footer {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 5rem;
+  bottom: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+footer p {
+  font-size: var(--smaller-font-size);
+  color: var(--dark-grey);
+}
+
+footer p span {
+  display: inline-block;
+  transform: scale(1);
+  transition: all .1s ease;
+}
+
+footer p:hover span {
+  transform: scale(1.2);
 }
 
 /*========== SCROLL BAR ==========*/
@@ -142,23 +173,41 @@ img {
 }
 
 /*============= ACCORDION =================*/
-.accordion__container {
-  position: absolute;
-  margin: 0 auto;
-  top: 6rem;
+.calc__accordion {
+  width: 90%;
+  height: 66rem;
+  overflow-y: auto;
+  margin-top: -15rem;
   padding: 3.2rem 1.6rem;
   background-color: var(--container-color);
   border-radius: 0.8rem;
   box-shadow: 0 8px 20px rgba(34, 0, 77, 0.2);
 }
 
-.accordion__itens {
+.calc__accordion h2 {
+  font-size: var(--title--font-size);
+  font-weight: 400;
+}
+
+.calc__accordion h2 span {
+  font-weight: 600;
+}
+
+.calc__accordion__subtitle {
+  font-size: var(--small-font-size);
+  font-weight: 400;
+  padding: 1rem 0;
+  margin-bottom: 1.4rem;
+  margin-left: 3.2rem;
+}
+
+.calc__accordion__itens {
   display: grid;
   row-gap: 1.2rem;
   grid-template-columns: 100%;
 }
 
-.accordion__title {
+.calc__accordion__title {
   font-size: var(--small-font-size);
   color: var(--title-color);
   font-weight: 400;
@@ -166,29 +215,30 @@ img {
   transition: 0.2s;
 }
 
-.accordion__header {
+.calc__accordion__header {
   display: flex;
   column-gap: 0.8rem;
   padding: 2rem 2rem 2rem 1.6rem;
   cursor: pointer;
 }
 
-.accordion__icon {
+.calc__accordion__icon {
   font-size: 2.4rem;
   height: max-content;
   color: var(--title-color);
   transition: 0.3s;
 }
 
-.accordion__item {
+.calc__accordion__item {
   box-shadow: 0 0.2rem 0.6rem rgba(38, 38, 38, 0.1);
   background-color: var(--first-color-lighten);
   border-radius: 0.4rem;
   position: relative;
   transition: all 0.25s ease;
+  cursor: pointer;
 }
 
-.accordion__item::after {
+.calc__accordion__item::after {
   content: "";
   background-color: var(--first-color);
   width: 0.5rem;
@@ -199,69 +249,69 @@ img {
   border-radius: 0.4rem 0 0 0.4rem;
 }
 
-.accordion__item:nth-child(1) {
+.calc__accordion__item:nth-child(1) {
   background: #fff7f0;
 }
 
-.accordion__item:nth-child(1)::after {
+.calc__accordion__item:nth-child(1)::after {
   background: #ffc08a;
 }
 
-.accordion__item:nth-child(2) {
+.calc__accordion__item:nth-child(2) {
   background: #f0f0ff;
 }
 
-.accordion__item:nth-child(2) label::before {
+.calc__accordion__item:nth-child(2) label::before {
   border-color: #8a8aff;
 }
 
-.accordion__item:nth-child(2) input[type="checkbox"]:checked + label::before {
+.calc__accordion__item:nth-child(2) input[type="checkbox"]:checked + label::before {
   background-color: #8a8aff;
 }
 
-.accordion__item:nth-child(2)::after {
+.calc__accordion__item:nth-child(2)::after {
   background: #8a8aff;
 }
 
-.accordion__item:nth-child(3) {
+.calc__accordion__item:nth-child(3) {
   background: #fff0f3;
 }
 
-.accordion__item:nth-child(3) label::before {
+.calc__accordion__item:nth-child(3) label::before {
   border-color: #ff8aa1;
 }
 
-.accordion__item:nth-child(3) input[type="checkbox"]:checked + label::before {
+.calc__accordion__item:nth-child(3) input[type="checkbox"]:checked + label::before {
   background-color: #ff8aa1;
 }
 
-.accordion__item:nth-child(3)::after {
+.calc__accordion__item:nth-child(3)::after {
   background: #ff8aa1;
 }
 
-.accordion__item:nth-child(4) {
+.calc__accordion__item:nth-child(4) {
   background: #f0faff;
 }
 
-.accordion__item:nth-child(4) label::before {
+.calc__accordion__item:nth-child(4) label::before {
   border-color: #8ad8ff;
 }
 
-.accordion__item:nth-child(4) input[type="checkbox"]:checked + label::before {
+.calc__accordion__item:nth-child(4) input[type="checkbox"]:checked + label::before {
   background-color: #8ad8ff;
 }
 
-.accordion__item:nth-child(4)::after {
+.calc__accordion__item:nth-child(4)::after {
   background: #8ad8ff;
 }
 
-.accordion__content {
+.calc__accordion__content {
   overflow: hidden;
   height: 0;
-  transition: all .25s ease;
+  transition: all 0.25s ease;
 }
 
-.accordion__slider, .accordion__grid {
+.calc__accordion__slider, .calc__accordion__grid {
   display: grid;
   align-items: center;
   gap: 0.6rem;
@@ -269,34 +319,47 @@ img {
   font-size: var(--smaller-font-size);
 }
 
-.accordion__slider {
-  grid-template-columns: 8rem 1fr 2rem;
+.calc__accordion__slider {
+  grid-template-columns: 1fr;
 }
 
-.accordion__slider p {
+.calc__accordion__slider p {
   font-weight: 600;
 }
 
-.accordion__slider p:last-of-type {
+.calc__accordion__slider div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.calc__accordion__slider div > p {
   color: var(--first-color);
+  text-align: right;
+  min-width: 2rem;
   margin-left: 0.6rem;
 }
 
-.accordion__slider input[type="range"] {
+.calc__accordion__slider input[type="range"] {
   width: 100%;
   height: 100%;
   -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   outline: none;
   background-color: #f2f2f2;
   overflow: hidden;
   border-radius: 2.5rem;
+  padding: 0.1rem;
   box-shadow: inset 0 0 0.6rem rgba(0, 0, 0, 0.2);
 }
 
-.accordion__slider input[type="range"]::-webkit-slider-thumb {
+.calc__accordion__slider input[type="range"]::-webkit-slider-thumb, .calc__accordion__slider input[type="range"]::-moz-range-thumb {
   -webkit-appearance: none;
-  width: 2rem;
-  height: 2rem;
+  -moz-appearance: none;
+  appearance: none;
+  width: 1.5rem;
+  height: 1.5rem;
   border-radius: 50%;
   border: 0.2rem solid #ffc08a;
   background-color: var(--container-color);
@@ -304,23 +367,23 @@ img {
   box-shadow: -41rem 0 0 40rem #ffc08a;
 }
 
-.accordion__grid {
+.calc__accordion__grid {
   grid-template-columns: repeat(2, 1fr);
 }
 
-.accordion__grid__item {
+.calc__accordion__grid__item {
   display: flex;
   align-items: center;
   z-index: 1;
 }
 
-.accordion__grid__item input[type="checkbox"] {
+.calc__accordion__grid__item input[type="checkbox"] {
   position: absolute;
   opacity: 0;
   z-index: -1;
 }
 
-.accordion__grid__item label {
+.calc__accordion__grid__item label {
   position: relative;
   padding-left: 3.2rem;
   padding-right: 1.6rem;
@@ -328,37 +391,37 @@ img {
   cursor: pointer;
 }
 
-.accordion__grid__item label::before {
+.calc__accordion__grid__item label::before {
   content: " ";
   position: absolute;
-  top: .1rem;
+  top: 0.1rem;
   left: 0;
   display: block;
-  width: 2.2rem;
-  height: 2.2rem;
+  width: 2.4rem;
+  height: 2.4rem;
   border: 0.2rem solid var(--first-color);
-  border-radius: .25rem;
+  border-radius: 0.25rem;
   z-index: -1;
 }
 
-.accordion__grid__item input[type="checkbox"]:checked + label {
+.calc__accordion__grid__item input[type="checkbox"]:checked + label {
   padding-left: 1.6rem;
   color: var(--container-color);
 }
 
-.accordion__grid__item input[type="checkbox"]:checked + label::before {
+.calc__accordion__grid__item input[type="checkbox"]:checked + label::before {
   top: 0;
   width: 100%;
-  height: 2.4rem;
+  height: 2.6rem;
   background: var(--first-color);
   border: none;
 }
 
-.accordion__grid__item label,
-.accordion__grid__item label::before {
-  -webkit-transition: .25s all ease;
-  -o-transition: .25s all ease;
-  transition: .25s all ease;
+.calc__accordion__grid__item label,
+.calc__accordion__grid__item label::before {
+  -webkit-transition: 0.25s all ease;
+  -o-transition: 0.25s all ease;
+  transition: 0.25s all ease;
 }
 
 .divider {
@@ -386,15 +449,52 @@ img {
 }
 
 /* Rotate the plus icon and add font weight to titles*/
-.accordion-open .accordion__icon {
+.accordion-open .calc__accordion__icon {
   transform: rotate(135deg);
 }
 
-.accordion-open .accordion__title {
+.accordion-open .calc__accordion__title {
   font-weight: 600;
 }
 
 /*=============== MEDIA QUERIES ===============*/
 /* For small devices  */
+@media screen and (max-width: 350px) {
+  .calc__accordion {
+    margin-top: -17rem;
+    padding: 2.6rem 1rem;
+  }
+  .calc__accordion__header {
+    padding: 1.4rem 1.4rem 1.4rem 1rem;
+  }
+  .calc__accordion__title {
+    font-size: var(--smaller-font-size);
+  }
+  .calc__accordion__slider {
+    grid-template-columns: 1fr;
+  }
+  .calc__accordion__grid {
+    grid-template-columns: 1fr;
+    padding: 0 1.6rem 1.6rem 4.2rem;
+  }
+  .calc__button {
+    padding: 1rem;
+    margin: 1.4rem 0;
+  }
+}
+
 /* For medium devices */
+@media screen and (min-width: 768px) {
+  .calc__content {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .calc__accordion {
+    width: 50%;
+    margin-top: 0;
+    margin-left: -10rem;
+  }
+}
+
 /* For large devices */

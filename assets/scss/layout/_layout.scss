@@ -1,10 +1,4 @@
 /*=============== LAYOUT ===============*/
-.container{
-    max-width: 968px;
-    margin-left: 1.6rem;
-    margin-right: 1.6rem;
-}
-
 .noselect{
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -15,21 +9,27 @@
 
 /*=============== CALCULATOR FORM ===============*/
 .calc{
-    display: grid;
-    grid-template-columns: 100%;
-    height: 100vh;
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
+    max-width: 968px;
+    min-height: 100vh;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     &__content{
-        display: grid;
+        width: 95%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin: 0 auto;
+        max-height: 66rem;
     }
-
     &__img{
-        justify-self: center;
+        width: 80%;
 
         img{
-            width: 30rem;
+            width: 90vw;
             margin-top: 1.5rem;
             border-radius: .75rem;
         }
@@ -53,13 +53,42 @@
 
     &__social{
         display: flex;
-        justify-content: space-between;
-        padding: 0 10rem;
+        width: 100%;
+        justify-content: space-around;
+        
         &__icon{
             font-size: 2rem;
             color: var(--first-color-dark);
         }
     }
+}
+
+/*========== FOOTER ==========*/
+footer{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 5rem;
+    bottom: 0;
+    left: 0;
+    cursor: pointer;
+}
+
+footer p{
+    font-size: var(--smaller-font-size);
+    color: var(--dark-grey);
+}
+
+footer p span{
+    display: inline-block;
+    transform: scale(1);
+    transition: all .1s ease;
+}
+
+footer p:hover span{
+    transform: scale(1.2);
 }
 
 /*========== SCROLL BAR ==========*/

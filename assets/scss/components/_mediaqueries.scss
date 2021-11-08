@@ -1,10 +1,56 @@
 /*=============== MEDIA QUERIES ===============*/
 /* For small devices  */
 @media screen and (max-width: 350px){
-    
+    .calc{
+
+        &__accordion{
+            margin-top: -17rem;
+            padding: 2.6rem 1rem;
+
+            &__header{
+                padding: 1.4rem 1.4rem 1.4rem 1rem;
+            }
+
+            &__title{
+                font-size: var(--smaller-font-size);
+            }
+
+            &__slider{
+                grid-template-columns: 1fr;
+            }
+
+            &__grid{
+                grid-template-columns: 1fr;
+                padding: 0 1.6rem 1.6rem 4.2rem;
+            }
+        }
+
+        &__button{
+            padding: 1rem;
+            margin: 1.4rem 0;
+        }
+    }
 }
 
 /* For medium devices */
+@media screen and (min-width: 768px){
+    .calc{
+        &__content{
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &__accordion{
+            width: 50%;
+            margin-top: 0;
+            margin-left: -10rem;
+        }
+    }
+}
 
 
 /* For large devices */
+@media screen and (min-width: 1024px){
+    
+}

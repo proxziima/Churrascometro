@@ -13,134 +13,147 @@
         <title>Calculadora do Churras</title>
     </head>
     <body>
-        <section class="calc container">
+        <main class="calc">
             <div class="calc__content">
                 <div class="calc__img">
-                    <img src="assets/img/bg_3.webp" alt="">
+                    <h2><span>🥩 BBQ</span>uiz</h2>
+                    <h3 class="calc__accordion__subtitle">Plan the perfect BBQ in minutes</h3>
+                    <img src="assets/img/bg_5.webp" alt="">
                 </div>
 
-                <div class="accordion__container">
-                    <div class="accordion__itens">
+                <div class="calc__accordion">
+                    <h3 class="calc__accordion__subtitle">Selecione os itens que você quer levar que a gente faz o resto </h3>
+                    <div class="calc__accordion__itens">
                         <!-- ====================== ACCORDION ITEM I ============================= -->
-                        <div class="accordion__item">
-                            <header class="accordion__header">
-                                <i class="bx bx-plus accordion__icon"></i>
-                                <h3 class="accordion__title">👩‍🍳 Serão quantos convidados?</h3>
+                        <div class="calc__accordion__item">
+                            <header class="calc__accordion__header">
+                                <i class="bx bx-plus calc__accordion__icon"></i>
+                                <h3 class="calc__accordion__title noselect">👩‍🍳 Serão quantos convidados?</h3>
                             </header>
-                            <div class="accordion__content">
+                            <div class="calc__accordion__content">
                                 <!-- ====================== HOMENS ============================= -->
-                                <div class="accordion__slider">
+                                <div class="calc__accordion__slider">
                                     <p>👨 Homens</p>
-                                    <input id="adulto__slider" type="range" min="0" max="100" value="3" oninput="adulto_value.innerText = this.value">
-                                    <p id="adulto_value">10</p>
+                                    <div>
+                                        <input id="adulto__slider" type="range" min="0" max="20" value="3" oninput="adulto_value.innerText = this.value">
+                                        <p id="adulto_value">10</p>
+                                    </div>
                                 </div>
                                 <!-- ====================== MULHERES ============================= -->
-                                <div class="accordion__slider">
+                                <div class="calc__accordion__slider">
                                     <p >👩 Mulheres</p>
-                                    <input id="mulher__slider" type="range" min="0" max="100" value="3" oninput="mulher_value.innerText = this.value">
-                                    <p id="mulher_value">10</p>
+                                    <div>
+                                        <div>
+                                            <input id="mulher__slider" type="range" min="0" max="20" value="3" oninput="mulher_value.innerText = this.value">
+                                            <p id="mulher_value">10</p>
+                                        </div>
+                                    </div>
                                 </div>
                                 <!-- ====================== CRIANÇAS ============================= -->
-                                <div class="accordion__slider">
+                                <div class="calc__accordion__slider">
                                     <p >👶 Crianças</p>
-                                    <input id="crianca__slider" type="range" min="0" max="100" value="3" oninput="crianca_value.innerText = this.value">
-                                    <p id="crianca_value">10</p>
+                                    <div>
+                                        <input id="crianca__slider" type="range" min="0" max="20" value="3" oninput="crianca_value.innerText = this.value">
+                                        <p id="crianca_value">10</p>
+                                    </div>
                                 </div>
                                 <!-- ====================== VEGANOS ============================= -->
-                                <div class="accordion__slider">
+                                <div class="calc__accordion__slider">
                                     <p >🥦 Veganos</p>
-                                    <input id="vegano__slider" type="range" min="0" max="100" value="3" oninput="vegano_value.innerText = this.value">
-                                    <p id="vegano_value">10</p>
+                                    <div>
+                                        <input id="vegano__slider" type="range" min="0" max="20" value="3" oninput="vegano_value.innerText = this.value">
+                                        <p id="vegano_value">10</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <!-- ====================== ACCORDION ITEM 2 ============================= -->
-                        <div class="accordion__item">
-                            <header class="accordion__header">
-                                <i class="bx bx-plus accordion__icon"></i>
-                                <h3 class="accordion__title">🥩 Quais serão as carnes e vegetais?</h3>
+                        <div class="calc__accordion__item">
+                            <header class="calc__accordion__header">
+                                <i class="bx bx-plus calc__accordion__icon"></i>
+                                <h3 class="calc__accordion__title noselect">🥩 Quais serão as carnes e vegetais?</h3>
                             </header>
-                            <div class="accordion__content">
-                                <div class="accordion__grid grid">
-                                    <div class="accordion__grid__item">
+                            <div class="calc__accordion__content">
+                                <div class="calc__accordion__grid grid">
+                                    <div class="calc__accordion__grid__item">
                                         <input id="picanha_check" type="checkbox">
                                         <label class="noselect" for="picanha_check">Picanha</label>
                                     </div>
-                                    <div class="accordion__grid__item">
+                                    <div class="calc__accordion__grid__item">
                                         <input id="alcatra_check" type="checkbox">
                                         <label class="noselect" for="alcatra_check">Alcatra</label>
                                     </div>
-                                    <div class="accordion__grid__item">
+                                    <div class="calc__accordion__grid__item">
                                         <input id="mignon_check" type="checkbox">
                                         <label class="noselect" for="mignon_check">Filé Mignon</label>
                                     </div>
-                                    <div class="accordion__grid__item">
+                                    <div class="calc__accordion__grid__item">
                                         <input id="linguica_check" type="checkbox">
                                         <label class="noselect" for="linguica_check">Linguiça</label>
                                     </div>
-                                    <div class="accordion__grid__item">
+                                    <div class="calc__accordion__grid__item">
                                         <input id="tulipa_check" type="checkbox">
                                         <label class="noselect" for="tulipa_check">Tulipa</label>
                                     </div>
-                                    <div class="accordion__grid__item">
+                                    <div class="calc__accordion__grid__item">
                                         <input id="coxa_check" type="checkbox">
                                         <label class="noselect" for="coxa_check">Coxa da Asa</label>
                                     </div>
                                 </div>
                                 <div class="divider"></div>
-                                <div class="accordion__grid grid">
-                                    <div class="accordion__grid__item">
+                                <div class="calc__accordion__grid grid">
+                                    <div class="calc__accordion__grid__item">
                                         <input id="berinjela_check" type="checkbox">
-                                        <label class="noselect" for="berinjela_check">Abobrinha</label>
+                                        <label class="noselect" for="berinjela_check">Berinjela</label>
                                     </div>
-                                    <div class="accordion__grid__item">
+                                    <div class="calc__accordion__grid__item">
                                         <input id="abobrinha_check" type="checkbox">
                                         <label class="noselect" for="abobrinha_check">Abobrinha</label>
                                     </div>
-                                    <div class="accordion__grid__item">
+                                    <div class="calc__accordion__grid__item">
                                         <input id="brocolis_check" type="checkbox">
                                         <label class="noselect" for="brocolis_check">Brócolis</label>
                                     </div>
-                                    <div class="accordion__grid__item">
+                                    <div class="calc__accordion__grid__item">
                                         <input id="cogumelo_check" type="checkbox">
                                         <label class="noselect" for="cogumelo_check">Cogumelos</label>
                                     </div>
-                                    <div class="accordion__grid__item">
+                                    <div class="calc__accordion__grid__item">
                                         <input id="cenoura_check" type="checkbox">
-                                        <label class="noselect" for="cenoura_check">Berinjela</label>
+                                        <label class="noselect" for="cenoura_check">Cenoura</label>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <!-- ====================== ACCORDION ITEM 3 ============================= -->
-                        <div class="accordion__item">
-                            <header class="accordion__header">
-                                <i class="bx bx-plus accordion__icon"></i>
-                                <h3 class="accordion__title">🥗 Pensou em quais acompanhamentos?</h3>
+                        <div class="calc__accordion__item">
+                            <header class="calc__accordion__header">
+                                <i class="bx bx-plus calc__accordion__icon"></i>
+                                <h3 class="calc__accordion__title noselect">🥗 Pensou em quais acompanhamentos?</h3>
                             </header>
-                            <div class="accordion__content">
-                                <div class="accordion__grid grid">
-                                    <div class="accordion__grid__item">
+                            <div class="calc__accordion__content">
+                                <div class="calc__accordion__grid grid">
+                                    <div class="calc__accordion__grid__item">
                                         <input id="arroz_check" type="checkbox">
                                         <label class="noselect" for="arroz_check">Arroz</label>
                                     </div>
-                                    <div class="accordion__grid__item">
+                                    <div class="calc__accordion__grid__item">
                                         <input id="farofa_check" type="checkbox">
                                         <label class="noselect" for="farofa_check">Farofa</label>
                                     </div>
-                                    <div class="accordion__grid__item">
+                                    <div class="calc__accordion__grid__item">
                                         <input id="maionese_check" type="checkbox">
                                         <label class="noselect" for="maionese_check">Maionese</label>
                                     </div>
-                                    <div class="accordion__grid__item">
+                                    <div class="calc__accordion__grid__item">
                                         <input id="paoDeAlho_check" type="checkbox">
                                         <label class="noselect" for="paoDeAlho_check">Pão de Alho</label>
                                     </div>
-                                    <div class="accordion__grid__item">
+                                    <div class="calc__accordion__grid__item">
                                         <input id="queijo_check" type="checkbox">
                                         <label class="noselect" for="queijo_check">Queijo</label>
                                     </div>
-                                    <div class="accordion__grid__item">
+                                    <div class="calc__accordion__grid__item">
                                         <input id="vinagrete_check" type="checkbox">
                                         <label class="noselect" for="vinagrete_check">Vinagrete</label>
                                     </div>
@@ -148,34 +161,34 @@
                             </div>
                         </div>
                         <!-- ====================== ACCORDION ITEM 4 ============================= -->
-                        <div class="accordion__item">
-                            <header class="accordion__header">
-                                <i class="bx bx-plus accordion__icon"></i>
-                                <h3 class="accordion__title">🛒 Não esqueça dos suprimentos</h3>
+                        <div class="calc__accordion__item">
+                            <header class="calc__accordion__header">
+                                <i class="bx bx-plus calc__accordion__icon"></i>
+                                <h3 class="calc__accordion__title noselect">🛒 Não esqueça dos suprimentos</h3>
                             </header>
-                            <div class="accordion__content">
-                                <div class="accordion__grid grid">
-                                    <div class="accordion__grid__item">
+                            <div class="calc__accordion__content">
+                                <div class="calc__accordion__grid grid">
+                                    <div class="calc__accordion__grid__item">
                                         <input id="carvao_check" type="checkbox">
                                         <label class="noselect" for="carvao_check">Carvão</label>
                                     </div>
-                                    <div class="accordion__grid__item">
+                                    <div class="calc__accordion__grid__item">
                                         <input id="copos_check" type="checkbox">
                                         <label class="noselect" for="copos_check">Copos</label>
                                     </div>
-                                    <div class="accordion__grid__item">
+                                    <div class="calc__accordion__grid__item">
                                         <input id="gelo_check" type="checkbox">
                                         <label class="noselect" for="gelo_check">Gelo</label>
                                     </div>
-                                    <div class="accordion__grid__item">
+                                    <div class="calc__accordion__grid__item">
                                         <input id="guardanapo_check" type="checkbox">
                                         <label class="noselect" for="guardanapo_check">Guardanapo</label>
                                     </div>
-                                    <div class="accordion__grid__item">
+                                    <div class="calc__accordion__grid__item">
                                         <input id="limao_check" type="checkbox">
                                         <label class="noselect" for="limao_check">Limão</label>
                                     </div>
-                                    <div class="accordion__grid__item">
+                                    <div class="calc__accordion__grid__item">
                                         <input id="sal_check" type="checkbox">
                                         <label class="noselect" for="sal_check">Sal Grosso</label>
                                     </div>
@@ -183,30 +196,30 @@
                             </div>
                         </div>
                         <!-- ====================== ACCORDION ITEM 5 ============================= -->
-                        <div class="accordion__item">
-                            <header class="accordion__header">
-                                <i class="bx bx-plus accordion__icon"></i>
-                                <h3 class="accordion__title">🥤Quais bebidas deseja servir?</h3>
+                        <div class="calc__accordion__item">
+                            <header class="calc__accordion__header">
+                                <i class="bx bx-plus calc__accordion__icon"></i>
+                                <h3 class="calc__accordion__title noselect">🥤Quais bebidas deseja servir?</h3>
                             </header>
-                            <div class="accordion__content">
-                                <div class="accordion__grid grid">
-                                    <div class="accordion__grid__item">
+                            <div class="calc__accordion__content">
+                                <div class="calc__accordion__grid grid">
+                                    <div class="calc__accordion__grid__item">
                                         <input id="agua_check" type="checkbox">
                                         <label class="noselect" for="agua_check">Água</label>
                                     </div>
-                                    <div class="accordion__grid__item">
+                                    <div class="calc__accordion__grid__item">
                                         <input id="cachaca_check" type="checkbox">
                                         <label class="noselect" for="cachaca_check">Cachaça</label>
                                     </div>
-                                    <div class="accordion__grid__item">
+                                    <div class="calc__accordion__grid__item">
                                         <input id="cerveja_check" type="checkbox">
                                         <label class="noselect" for="cerveja_check">Cerveja</label>
                                     </div>
-                                    <div class="accordion__grid__item">
+                                    <div class="calc__accordion__grid__item">
                                         <input id="refrigerante_check" type="checkbox">
                                         <label class="noselect" for="refrigerante_check">Refrigerante</label>
                                     </div>
-                                    <div class="accordion__grid__item">
+                                    <div class="calc__accordion__grid__item">
                                         <input id="suco_check" type="checkbox">
                                         <label class="noselect" for="suco_check">Suco</label>
                                     </div>
@@ -225,7 +238,11 @@
                 </div>
                 
             </div>
-        </section>
+        </main>
+        <!--==================== FOOTER ====================-->
+        <!-- <footer>
+            <p>Made with <span>❤️</span> by <a href="#">Vinicius Queiroz</a></p>
+        </footer> -->
         <!--===== MAIN JS =====-->
         <script src="assets/js/main.js"></script>
     </body>
