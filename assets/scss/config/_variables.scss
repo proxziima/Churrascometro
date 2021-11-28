@@ -1,36 +1,42 @@
 /*=============== GOOGLE FONTS ===============*/
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 
 /*=============== VARIABLES CSS ===============*/
-:root{
-    /*========== Colors ==========*/
-    --hue-color: 267;
+:root {
+  /*========== Colors ==========*/
+  // --hue-color: 267;
 
-    --first-color: hsl(var(--hue-color), 48%, 35%);
-    --first-color-dark: hsl(var(--hue-color), 100%, 15%);
-    --first-color-light: hsl(var(--hue-color), 8%, 65%);
-    --first-color-lighten: #f2f2f2;
-    --title-color: hsl(var(--hue-color), 48%, 22%);
-    --text-color: hsl(var(--hue-color), 12%, 35%);
-    --body-color: hsl(var(--hue-color), 48%, 98%);
-    --container-color: #fff;
+  --body-color: #eddfa8;
+  --primary-container-color: #fff;
+  --seconday-container-color: hsl(40, 93%, 67%);
+  --opaque-color: hsla(207, 8%, 21%, 0.9);
 
-    --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
-    --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
-    --scroll-thumb-hover: hsl(var(--hue-color), 20%, 60%);
+  --text-color: hsl(245, 9%, 27%);
+  --title-color: hsl(40, 100%, 60%);
+  --link-color: hsl(245, 7%, 76%);
 
-    /*========== Font and typography ==========*/
-    --body-font: 'Poppins', sans-serif;
+  --scroll-bar-color: hsla(0, 0%, 77%, 0.102);
+  --scroll-thumb-color: hsla(0, 0%, 77%, 0.8);
+  --scroll-thumb-hover: hsla(0, 0%, 77%, 0.6);
 
-    --title--font-size: 2rem;
-    --normal-font-size: 1.5rem;
-    --small-font-size: 1.3rem;
-    --smaller-font-size: 1.2rem;
+  /*========== Rainbow Colors ==========*/
+  --first-color: hsl(28, 100, 77);
+  --second-color: hsl(240, 100, 77);
+  --third-color: hsl(348, 100, 77);
+  --fourth-color: hsl(200, 100, 77);
 
-    @media screen and (min-width: 768px){
-        --title--font-size: 1.7rem;
-        --normal-font-size: 1.6rem;
-        --small-font-size: 1.4rem;
-        --smaller-font-size: 1.3rem;
-    }
+  /*========== Font and typography ==========*/
+  --body-font: "Poppins", sans-serif;
+
+  --title--font-size: 2rem;
+  --normal-font-size: 1.5rem;
+  --small-font-size: 1.3rem;
+  --smaller-font-size: 1.2rem;
+
+  @media screen and (min-width: 768px) {
+    --title--font-size: 1.7rem;
+    --normal-font-size: 1.6rem;
+    --small-font-size: 1.4rem;
+    --smaller-font-size: 1.3rem;
+  }
 }

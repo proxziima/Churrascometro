@@ -1,29 +1,84 @@
 /*=============== BASE ===============*/
+
 *,::before,::after{
     box-sizing: border-box;
+}
+
+// Remove o paddding de ul ou ol que possuem classe.
+ul[class],
+ol[class]{
     padding: 0;
-    margin: 0;
 }
 
-html {
+// Remove a margem padrão
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+// Arredonda a fonte para número rem inteiro
+html{
     font-size: 62.5%;
-    scroll-behavior: smooth;
-    overflow-y: scroll;
 }
 
+// Estilos padrão para o  body
 body{
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
     font-family: var(--body-font);
     font-size: var(--normal-font-size);
     background-color: var(--body-color);
     color: var(--text-color);
 }
 
+// Links sem uma classe, fica com o underline mais legível
 a{
     text-decoration: none;
 }
+a:not([class]){
+    text-decoration-skip-ink: auto;
+}
 
+// Deixa as imagens mais fáceis de trabalhar
 img{
     max-width: 100%;
     height: auto;
     display: block;
 }
+
+// Estilo mais natural e padrão para os articles 
+article > * + * {
+    margin-top: 1.6em;
+}
+
+input,
+button,
+textarea,
+select{
+    font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
